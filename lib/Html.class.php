@@ -2,7 +2,7 @@
 
 class Html {
 
-  public  $tagName    = 'div',
+  private $tagName    = 'div',
           $id         = '',
           $classNames = [],
           $attributes = [],

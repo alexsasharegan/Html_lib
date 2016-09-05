@@ -37,6 +37,7 @@ $parentDiv = (new Html)
     ->addStyle('color', 'red')
     ->addAttributes([ 'data-toggle' => 'tooltip', 'title' => 'This is my tooltip!' ])
     ->addClass('awesome');
+echo $parentDiv;
 // Outputs:
 // <div class="awesome" data-toggle="tooltip" title="This is my tooltip!" style="color:red"></div>
 
