@@ -14,6 +14,9 @@ $div = new Html; # defaults to an empty 'div'
 $button = new Html('button'); # specify the tagName
 $p = new Html('p', 'This is a paragraph with some content.'); # specify inner element text
 
+// Set element id
+$appDiv = (new Html)->id('app');
+
 // Adding classes
 $div = new Html; # create a new div
 $div->addClass('item'); # add class .item
