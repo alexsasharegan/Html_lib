@@ -74,7 +74,7 @@ class Html {
   }
 
   public function addAttribute( $name, $value ) {
-    array_push( $this->attributes, Html::createAttribute( $name, $value ) );
+    array_push( $this->attributes, self::createAttribute( $name, $value ) );
     return $this;
   }
 
