@@ -10,7 +10,7 @@ class Html {
           $content    = '',
           $children   = [];
 
-  public static function createElement( $tagName, $content, $attributes = null ) {
+  public static function createElement( $tagName = 'div', $content = '', $attributes = null ) {
     $newAttributes = '';
 
     if ( !empty($attributes) && is_array( $attributes ) ) {
@@ -32,7 +32,7 @@ class Html {
     }
   }
 
-  public static function renderNode(Html $el) {
+  public static function renderNode( Html $el ) {
     return $el->render();
   }
 
