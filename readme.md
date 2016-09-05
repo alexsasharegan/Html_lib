@@ -30,10 +30,11 @@ $p->addStyle('color', 'red'); # set color to red
 $p->addStyles(['font-size' => '1.2em', 'text-transform' => 'uppercase',]); # set an array of inline styles
 
 // Chaining
-$parentDiv = new Html;
-$parentDiv->addStyle('color', 'red')
+$parentDiv = (new Html)
+    ->addStyle('color', 'red')
     ->addAttributes([ 'data-toggle' => 'tooltip', 'title' => 'This is my tooltip!' ])
     ->addClass('awesome');
+// Outputs:
 // <div class="awesome" data-toggle="tooltip" title="This is my tooltip!" style="color:red"></div>
 
 // now lets give it child elements
@@ -44,6 +45,7 @@ $childForm->createChild('input')->addAttribute('type', 'text');
 $childForm->createChild('button', 'Send')->addAttribute('type', 'submit');
 
 echo $parentDiv;
+// Outputs:
 //  <div class="awesome" data-toggle="tooltip" title="This is my tooltip!"
 //  style="color:red">
 //    <h3>Chaining</h3>
@@ -53,4 +55,12 @@ echo $parentDiv;
 //      <button type="submit">Send</button>
 //    </form>
 //  </div>
+
+// Static method element creation
+echo Html::createElement('h1', 'Awesome, right?', [
+  'style' => 'font-family:Monaco;',
+  'class' => 'awesome heading',
+]);
+// Outputs:
+// <h1 style="font-family:Monaco;" class="awesome heading">Awesome, right?</h1>
 ```

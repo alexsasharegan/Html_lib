@@ -3,6 +3,7 @@
 class Html {
 
   public  $tagName    = 'div',
+          $id         = '',
           $classNames = [],
           $attributes = [],
           $styles     = [],
@@ -38,7 +39,18 @@ class Html {
   function __construct( $tagName = 'div', $content = '' ) {
     $this->tagName = $tagName;
     $this->content = $content;
+  }
+
+  public function id( $id ) {
+    $this->id = $id;
     return $this;
+  }
+
+  public function getId() {
+    if ( !empty( $this->id ) ) {
+      return "id=\"{$this->id}\"";
+    }
+    return;
   }
 
   public function addClass( $className ) {
@@ -48,7 +60,7 @@ class Html {
     return $this;
   }
 
-  public function addClasses( $classList ) {
+  public function addClasses( array $classList ) {
     array_map( [$this, 'addClass'], $classList );
     return $this;
   }
@@ -66,7 +78,7 @@ class Html {
     return $this;
   }
 
-  public function addAttributes( $attributeList ) {
+  public function addAttributes( array $attributeList ) {
     foreach ($attributeList as $name => $value) {
       $this->addAttribute( $name, $value );
     }
@@ -86,7 +98,7 @@ class Html {
     return $this;
   }
 
-  public function addStyles( $styleList ) {
+  public function addStyles( array $styleList ) {
     foreach ( $styleList as $name => $value ) {
       $this->addStyle( $name, $value );
     }
@@ -121,6 +133,7 @@ class Html {
       '<'
       . implode( ' ', [
           $this->tagName,
+          $this->getId(),
           $this->getClasses(),
           $this->getAttributes(),
           $this->getStyles(),
