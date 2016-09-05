@@ -35,7 +35,7 @@ class Html {
     return $el->render();
   }
 
-  function __construct( $tagName, $content = '' ) {
+  function __construct( $tagName = 'div', $content = '' ) {
     $this->tagName = $tagName;
     $this->content = $content;
     return $this;
@@ -67,7 +67,9 @@ class Html {
   }
 
   public function addAttributes( $attributeList ) {
-    array_map( [$this, 'addAttribute'], $attributeList );
+    foreach ($attributeList as $name => $value) {
+      $this->addAttribute( $name, $value );
+    }
     return $this;
   }
 
