@@ -16,7 +16,7 @@ class Html {
     if ( !empty($attributes) && is_array( $attributes ) ) {
       $mappedAttributes = [];
       foreach ($attributes as $name => $value) {
-        $mappedAttributes[] = Html::createAttribute( $name, $value );
+        $mappedAttributes[] = self::createAttribute( $name, $value );
       }
       $newAttributes = implode( ' ', $mappedAttributes );
     }
