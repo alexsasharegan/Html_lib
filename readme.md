@@ -44,5 +44,13 @@ $childForm->createChild('input')->addAttribute('type', 'text');
 $childForm->createChild('button', 'Send')->addAttribute('type', 'submit');
 
 echo $parentDiv;
-// <div class="awesome" data-toggle="tooltip" title="This is my tooltip!" style="color:red"><h3>Chaining</h3><p>This is some awesome chaining!</p><form method="POST"><input type="text"><button type="submit">Send</button></form></div>
+//  <div class="awesome" data-toggle="tooltip" title="This is my tooltip!"
+//  style="color:red">
+//    <h3>Chaining</h3>
+//    <p>This is some awesome chaining!</p>
+//    <form method="POST">
+//      <input type="text">
+//      <button type="submit">Send</button>
+//    </form>
+//  </div>
 ```
