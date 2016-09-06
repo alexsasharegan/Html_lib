@@ -120,7 +120,7 @@ class Html {
     return $this;
   }
 
-  public function createChild( $tagName, $content = '' ) {
+  public function newChild( $tagName, $content = '' ) {
     $child = new Html( $tagName, $content );
     $this->children[] = $child;
     return $child;

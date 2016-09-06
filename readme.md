@@ -42,11 +42,11 @@ echo $parentDiv;
 // <div class="awesome" data-toggle="tooltip" title="This is my tooltip!" style="color:red"></div>
 
 // now lets give it child elements
-$parentDiv->createChild('h3', 'Chaining');
-$parentDiv->createChild('p', 'This is some awesome chaining!');
-$childForm = $parentDiv->createChild('form')->addAttribute('method', 'POST');
-$childForm->createChild('input')->addAttribute('type', 'text');
-$childForm->createChild('button', 'Send')->addAttribute('type', 'submit');
+$parentDiv->newChild('h3', 'Chaining');
+$parentDiv->newChild('p', 'This is some awesome chaining!');
+$childForm = $parentDiv->newChild('form')->addAttribute('method', 'POST');
+$childForm->newChild('input')->addAttribute('type', 'text');
+$childForm->newChild('button', 'Send')->addAttribute('type', 'submit');
 
 echo $parentDiv;
 // Outputs:
