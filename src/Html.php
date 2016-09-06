@@ -1,5 +1,7 @@
 <?php
 
+namespace Html;
+
 class Html {
 
   private $tagName    = 'div',
@@ -125,7 +127,7 @@ class Html {
   }
 
   public function renderChildren() {
-    return implode( '', array_map( 'Html::renderNode', $this->children ) );
+    return implode( '', array_map( '\Html\Html::renderNode', $this->children ) );
   }
 
   public function render() {
