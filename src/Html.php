@@ -115,9 +115,18 @@ class Html {
     }
   }
 
-  public function addText( $text ) {
-    $this->content = $text;
+  public function append( $newContent ) {
+    $this->content .= $newContent;
     return $this;
+  }
+
+  public function prepend( $newContent ) {
+    $this->content = $newContent . $this->content;
+    return $this;
+  }
+
+  public function set( $newContent ) {
+    $this->content = $newContent;
   }
 
   public function newChild( $tagName = 'div', $content = '' ) {
