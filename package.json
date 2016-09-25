@@ -1,0 +1,26 @@
+{
+	"name": "html_lib",
+	"version": "1.1.1",
+	"description": "A library for creating Html via chainable PHP objects.",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"start": "php -S localhost:4444 -t ./docs/build/",
+		"sami": "php sami.php update ./docs/config.sami.php -v"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexsasharegan/Html_lib.git"
+	},
+	"keywords": [
+		"html"
+	],
+	"author": "Alex Regan <alex.joseph.regan@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alexsasharegan/Html_lib/issues"
+	},
+	"homepage": "https://github.com/alexsasharegan/Html_lib#readme"
+}
