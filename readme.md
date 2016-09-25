@@ -1,5 +1,10 @@
 # Html_lib
-### A library for creating Html via chainable PHP objects.
+[![Latest Stable Version](https://poser.pugx.org/alexsasharegan/html/v/stable)](https://packagist.org/packages/alexsasharegan/html)
+[![Total Downloads](https://poser.pugx.org/alexsasharegan/html/downloads)](https://packagist.org/packages/alexsasharegan/html)
+[![Latest Unstable Version](https://poser.pugx.org/alexsasharegan/html/v/unstable)](https://packagist.org/packages/alexsasharegan/html)
+[![License](https://poser.pugx.org/alexsasharegan/html/license)](https://packagist.org/packages/alexsasharegan/html)
+
+A library for creating Html via chainable PHP objects.
 - - - -
 
 #### Methods
